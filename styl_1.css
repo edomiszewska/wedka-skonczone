@@ -1,0 +1,50 @@
+body{
+    font-family: Georgia;
+}
+header{
+    background-color: dodgerblue;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+main{
+    background-color: lightblue;
+    display: flex;
+    justify-content:space-between;
+    padding: 100px;
+    color: rgb(0, 0, 0);
+
+}
+
+footer>section{
+background-color: dodgerblue;
+color: white;
+width: 20%;
+height: 220px;
+
+}
+
+footer>article, footer>aside{
+    background-color: dodgerblue;
+    color: white;
+    width:40% ;
+    height: 220px;
+    text-align: center;
+
+    
+}
+
+a{
+    border: 1px dashed dimgray;
+    background-color: gold;
+    color: darkred;
+    padding: 10px;
+}
+
+footer{
+    display: flex;
+}
+input{
+    display: block;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karty wędkarskie</title>
+    <link rel="stylesheet" href="styl_1.css">
+</head>
+<body>
+   <div class="container">
+    <header><h2>Zgłoszenie na kartę wędkarską</h2></header>
+<main>
+    <section>
+        <h3>Formularz - karta wędkarska</h3>
+    <form action="#">
+        <label for="imie">imię:<input type="text" id="imie"></label><br>
+        <label for="nazwisko">nazwisko:<input type="text" id="nazw"></label><br>
+        <label for="adres">adres:<input type="text" size="30" id="adres"></label><br>
+       
+        <input type="reset" value="czyść" id="czy">
+        <input type="submit" value="zapisz" id="zap">
+
+    </form>
+    </section>
+    <aside id="dis">
+       
+    </aside>
+</main>
+<footer>
+    <section>
+        <h4>Typy łowisk</h4>
+        <ul><li>Zalewy</li>
+            <li>Stawy</li>
+            <li>Jeziora</li>
+            <li>Rzeki</li></ul>
+    </section>
+
+
+    <article>
+        <img src="wedka.jpg" alt="karta wędkarska" height="220px">
+    </article>
+    <aside>
+        <p>Stronę przygotował: 213742069 </p>
+        <a href="http://www.kartawedkarska.pl/">Karta wędkarska</a>
+    </aside>
+
+</footer>
+
+   </div> 
+
+    <script>
+        
+        const imie=document.querySelector('#imie')
+        const nazwisko=document.querySelector('#nazw')
+        const adres=document.querySelector('#adres')
+        const zapisz=document.querySelector('#zap')
+        
+        zapisz.addEventListener('click', function(evt){
+            evt.preventDefault()
+            if(nazwisko.value.length>2){
+                const ele=document.createElement('p')
+                ele.innerText=`Imię ${imie.value}, nazwisko: ${nazwisko.value}, adres: ${adres.value}`
+                const dis=document.querySelector('#dis')
+                innerHTML=''
+                dis.append(ele)
+            }else{
+            const ele=document.createElement(`p`)
+            const dis=document.querySelector('#dis')
+            ele.innerHTML='wymagane przynajmniej 3 litery w nazwisku i wypełnione wszystkie pola! '
+            innerHTML=''
+            dis.append(ele)
+        }})
+        const wyczysc=document.querySelector('#czy')
+    </script>
+</body>
+</html>
